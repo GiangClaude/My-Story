@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd87d853c70549d41aa995fff933dd6a, type: 3}
+  m_Name: Rice
+  m_EditorClassIdentifier: 
+  plantName: Rice
+  plantStages:
+  - {fileID: -7396305697263286651, guid: 426ad5b1472eadc4580af564c3ab6552, type: 3}
+  - {fileID: 3868332834043518974, guid: 426ad5b1472eadc4580af564c3ab6552, type: 3}
+  - {fileID: 6812107102740459891, guid: 426ad5b1472eadc4580af564c3ab6552, type: 3}
+  - {fileID: -4968072622433853253, guid: 426ad5b1472eadc4580af564c3ab6552, type: 3}
+  timeBtwStages:
+  - 2
+  - 5
+  - 10
+  interactionRequirements:
+  - triggerAtPlantStage: 1
+    requiredItem: {fileID: 11400000, guid: 0cb9cfb756155704692504dd0c4d29fe, type: 2}
+    interactionIconSprite: {fileID: -8746474983730921748, guid: ad58035d9ffb3f840ab2bef932a12c36, type: 3}
+    interactionPrompt: 
+    soilTileAfterInteraction: {fileID: 11400000, guid: ff13861751a7ad54cbae29199b1d2507, type: 2}
+  potentialYields:
+  - itemData: {fileID: 11400000, guid: 32f10e48eb530654f92b8aede42654c5, type: 2}
+    minCount: 1
+    maxCount: 3
+    dropChance: 1
+  - itemData: {fileID: 11400000, guid: 1d8d96b2fda436b478b13cb402461d45, type: 2}
+    minCount: 1
+    maxCount: 2
+    dropChance: 1

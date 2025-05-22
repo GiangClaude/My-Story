@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b1721fd052298f4c840afff727fd3eb, type: 3}
+  m_Name: Rice
+  m_EditorClassIdentifier: 
+  itemName: Item Name
+  icon: {fileID: -8553166176874854604, guid: 426ad5b1472eadc4580af564c3ab6552, type: 3}
+  itemType: 2
+  itemPrefab: {fileID: 4789827751666967779, guid: c3d0f40e99275824182dbcac980ce4c3, type: 3}
+  correspondingPlant: {fileID: 0}

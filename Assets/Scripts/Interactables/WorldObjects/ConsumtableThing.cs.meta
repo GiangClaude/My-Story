@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: dfcd5a35ad5da9940af075ec818afb36
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - highlight: {instanceID: 0}
+  - interactionIconDisplay: {instanceID: 0}
+  - genericTargetIcon: {fileID: -4324058390895741048, guid: c6ea810fd17067446bf2905bfd8ad4fa, type: 3}
+  - wrongItemFeedbackIcon: {fileID: -8482879506207794504, guid: c6ea810fd17067446bf2905bfd8ad4fa, type: 3}
+  - openedSprite: {instanceID: 0}
+  - itemNeedToInteract: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

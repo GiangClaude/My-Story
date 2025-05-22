@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26aad6f6d1b64e24795919496df01c54, type: 3}
+  m_Name: Cow
+  m_EditorClassIdentifier: 
+  animalName: Cow
+  timeHarvest: 30
+  timeHurry: 15
+  requireFeedItem: {fileID: 11400000, guid: c92cf283e58602943a75e3d80bade28d, type: 2}
+  potentialYields:
+  - itemData: {fileID: 11400000, guid: 84a3bb027ee9f8b48824f3b78fc809da, type: 2}
+    minCount: 1
+    maxCount: 3
+    dropChance: 1
+  animalPrefabs: {fileID: 1120734020408040217, guid: 1869bf291fa485a4582caecdac3c80fd, type: 3}
