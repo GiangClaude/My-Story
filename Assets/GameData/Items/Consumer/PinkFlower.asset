@@ -15,5 +15,5 @@ MonoBehaviour:
   itemName: Pink Flower
   icon: {fileID: 4843801229222195905, guid: adf6cf6316c83de49b6446c7b3a3eaa0, type: 3}
   itemType: 3
-  itemPrefab: {fileID: 0}
+  itemPrefab: {fileID: 4789827751666967779, guid: 9690ad8eb0796d149a192245eaaa86b0, type: 3}
   correspondingPlant: {fileID: 0}

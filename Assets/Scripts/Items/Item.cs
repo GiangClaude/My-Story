@@ -14,4 +14,12 @@ public class Item : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
     }
+
+    public virtual void PickUp()
+    {
+        if (ItemPickupUIController.Instance != null)
+        {
+            ItemPickupUIController.Instance.ShowItemPickup(data.itemName, data.icon);
+        }
+    }
 }

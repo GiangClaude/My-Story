@@ -71,10 +71,10 @@ public abstract class InteractableVisuals : MonoBehaviour, IInteractable
     protected virtual void UpdateStateVisuals()
     {
         // Mặc định: không làm gì với highlight. Subclass sẽ xử lý.
-        // Ví dụ: PlotManager sẽ set highlightRenderer.sprite = harvestIcon và highlight.SetActive(true)
+        // PlotManager sẽ set highlightRenderer.sprite = harvestIcon và highlight.SetActive(true)
         if (highlight != null)
         {
-            // highlight.SetActive(false); // Có thể tắt ở đây nếu muốn, hoặc subclass tự quản lý hoàn toàn
+          
         }
     }
 
@@ -96,10 +96,6 @@ public abstract class InteractableVisuals : MonoBehaviour, IInteractable
     protected IEnumerator ShowTemporaryInteractionIcon(Sprite iconToShow, float duration)
     {
         if (interactionIconDisplay == null || interactionIconRenderer == null) yield break;
-
-        // Lưu lại sprite và trạng thái active hiện tại của interaction icon (nếu có)
-        Sprite originalSprite = interactionIconRenderer.sprite;
-        bool WasActive = interactionIconDisplay.activeSelf;
 
         interactionIconRenderer.sprite = iconToShow;
         interactionIconDisplay.SetActive(true);

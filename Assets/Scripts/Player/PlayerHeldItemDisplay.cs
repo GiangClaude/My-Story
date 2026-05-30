@@ -7,16 +7,15 @@ public class PlayerHeldItemDisplay : MonoBehaviour
 {
     [Header("Tham chiếu")]
     private UIManager uiManager; // Tham chiếu đến UIManager
-    private Player player; // Tham chiếu đến Player (để lấy toolbar data)
-    [SerializeField] private SpriteRenderer heldItemSpriteRenderer; // Tham chiếu đến SpriteRenderer trên HeldItemDisplayPoint
+    private Player player; // Tham chiếu đến Player 
+    [SerializeField] private SpriteRenderer heldItemSpriteRenderer; // Tam chiếu hình ảnh
 
     [Header("Cấu hình")]
     private Sprite currentlyDisplayedSprite = null;// Tên item đang hiển thị để tránh cập nhật không cần thiết
 
     void Start()
     {
-        // --- SỬA ĐỔI: Lấy tham chiếu đáng tin cậy hơn ---
-        uiManager = FindFirstObjectByType<UIManager>(); // Tìm UIManager trong Scene
+        uiManager = FindFirstObjectByType<UIManager>(); 
         if (uiManager == null) Debug.LogError("PlayerHeldItemDisplay: Không tìm thấy UIManager trong Scene!");
 
         player = GetComponent<Player>(); // Lấy component Player cùng GameObject
@@ -40,7 +39,7 @@ public class PlayerHeldItemDisplay : MonoBehaviour
         // Kiểm tra các tham chiếu cần thiết
         if (uiManager == null || player == null || player.toolbar == null || heldItemSpriteRenderer == null)
         {
-            ClearDisplay(); // Nếu thiếu tham chiếu quan trọng, ẩn hiển thị
+            ClearDisplay(); 
             return;
         }
 
@@ -88,7 +87,7 @@ public class PlayerHeldItemDisplay : MonoBehaviour
             heldItemSpriteRenderer.sprite = null;
             heldItemSpriteRenderer.enabled = false; // Ẩn SpriteRenderer
         }
-        currentlyDisplayedSprite = null; // Reset sprite đang hiển thị
+        currentlyDisplayedSprite = null; 
     }
 
 }

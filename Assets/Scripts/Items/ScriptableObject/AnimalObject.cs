@@ -24,7 +24,4 @@ public class AnimalObject : ScriptableObject
 
     [Header("Harvesting")]
     public List<HarvestYield> potentialYields = new();
-
-    [Header("Prefabs")]
-    public GameObject animalPrefabs;
 }

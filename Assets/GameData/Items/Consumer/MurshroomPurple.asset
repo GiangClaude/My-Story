@@ -15,5 +15,5 @@ MonoBehaviour:
   itemName: MurshroomPurple
   icon: {fileID: -3361698288007970698, guid: adf6cf6316c83de49b6446c7b3a3eaa0, type: 3}
   itemType: 3
-  itemPrefab: {fileID: 4789827751666967779, guid: 96d6f15c4d61ac940be260660d8b17de, type: 3}
+  itemPrefab: {fileID: 4789827751666967779, guid: 7d7f0fc7879604c448c44901d9f50081, type: 3}
   correspondingPlant: {fileID: 0}

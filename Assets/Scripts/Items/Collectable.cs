@@ -1,6 +1,8 @@
-﻿using System;
+﻿using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing.Text;
 using UnityEngine;
 
 //Yêu cầu Object được gắn Collectable có thành phần Item. 
@@ -26,6 +28,8 @@ public class Collectable : MonoBehaviour
                 //Xóa GameObject khỏi màn chơi
                 if (player.inventory.Add(item))
                 {
+                    player.uiManager.inventoryUI.Refresh();
+                    item.PickUp();
                     Destroy(this.gameObject);
                 }
             }

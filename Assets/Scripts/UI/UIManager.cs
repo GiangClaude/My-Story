@@ -14,7 +14,6 @@ public class UIManager : MonoBehaviour
 
     private Slot_UI _selectedSlot = null;
     public Slot_UI SelectedSlot => _selectedSlot;
-    //private readonly int nonSwappableToolbarSlots = 3;
 
     private void Start()
     {
@@ -132,27 +131,6 @@ public class UIManager : MonoBehaviour
     }
 
 
-    /*private Inventory.Slot GetDataSlot(Slot_UI.ContainerType container, int index)
-    {
-        if (container == Slot_UI.ContainerType.Inventory)
-        {
-            //inventory slot
-            return player.inventory.slots[index];
-        }
-        else
-        {
-            //toolbar slot
-            var toolbarSlot = player.toolbar.slots[index];
-            return new Inventory.Slot
-            {
-                itemName = toolbarSlot.itemName,
-                count = toolbarSlot.count,
-                maxAllowed = toolbarSlot.maxAllowed,
-                icon = toolbarSlot.icon
-            };
-        }
-    }*/
-
     private Slot GetDataSlot(Slot_UI.ContainerType container, int index) // Sử dụng dynamic hoặc tạo một interface/base class chung
     {
         if (container == Slot_UI.ContainerType.Inventory)
@@ -175,30 +153,6 @@ public class UIManager : MonoBehaviour
             targetSlot.maxAllowed = max; // Giữ lại maxAllowed vì nó là thuộc tính của slot
             targetSlot.icon = icon;
         }
-
-        /*
-        if (container == Slot_UI.ContainerType.Inventory)
-        {
-            var invSlot = GetInventoryDataSlot(index);
-            if (invSlot != null)
-            {
-                invSlot.itemName = name;
-                invSlot.count = count;
-                invSlot.maxAllowed = max;
-                invSlot.icon = icon;
-            }
-        }
-        else
-        {
-            var toolSlot = GetToolbarDataSlot(index);
-            if (toolSlot != null)
-            {
-                toolSlot.itemName = name;
-                toolSlot.count = count;
-                // toolSlot.maxAllowed = max; // Toolbar slot có thể có maxAllowed riêng
-                toolSlot.icon = icon;
-            }
-        }*/
 
     }
 
@@ -239,16 +193,6 @@ public class UIManager : MonoBehaviour
                 UpdateHeldItemDisplay();
                 Debug.Log($"Consumed 1 {toolbarSlotData.itemName} from Toolbar slot {_selectedSlot.slotIndex}. Remaining: {toolbarSlotData.count}");
                 
-                /*
-                // Nếu hết item, bỏ chọn slot luôn
-                if (toolbarSlotData.count == 0)
-                {
-                    _selectedSlot.SetHighLight(false);
-                    _selectedSlot = null;
-                    UpdateHeldItemDisplay();
-                }*/
-                
-                //if (_selectedSlot.slotIndex >= nonSwappableToolbarSlots){Code ben tren vao day}
             }
         }
     }

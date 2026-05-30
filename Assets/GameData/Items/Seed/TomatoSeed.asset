@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b1721fd052298f4c840afff727fd3eb, type: 3}
   m_Name: TomatoSeed
   m_EditorClassIdentifier: 
-  itemName: TomatoSeed
+  itemName: Tomato Seed
   icon: {fileID: -167575426429258219, guid: 426ad5b1472eadc4580af564c3ab6552, type: 3}
   itemType: 1
   itemPrefab: {fileID: 4789827751666967779, guid: 604bf3d051eefb249ac4c97e468b69d3, type: 3}

@@ -11,15 +11,6 @@ public class Toolbar_UI : MonoBehaviour
     public Player player;
     public UIManager uiManager;
 
-    //    private Slot_UI selectedSlot;
-    //    private int selectedSlotIndex;
-    /*    private void Start()
-        {
-            SelectSlot(0);
-        }
-
-    */
-
     private void Awake()
     {
         uiManager = FindFirstObjectByType<UIManager>();
@@ -77,75 +68,6 @@ public class Toolbar_UI : MonoBehaviour
            
         }
     }
-
-/*    public void SelectSlot(int index)
-    {
-        if (toolbarSlots.Count == 8) {
-            if (selectedSlot != null)
-            {
-                selectedSlot.SetHighLight(false);
-            }
-
-            selectedSlot = toolbarSlots[index];
-            selectedSlot.SetHighLight(true);
-            if (player.toolbar.slots[index].itemName != "none") {
-                Debug.Log("Slot not null!");
-               }   
-        }
-    }
-
-    public bool isOnSelectSlot()
-    {
-        if (selectedSlot == null)
-        {
-            return false;
-        }
-        else return true;
-    }
-
-    public void changeToInventory(int index)
-    {
-        
-    }
-
-    private void CheckAlphaNumericKeys()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            SelectSlot(0);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            
-            SelectSlot(1);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            SelectSlot(2);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            SelectSlot(3);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha5))
-        {
-            SelectSlot(4);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha6))
-        {
-            SelectSlot(5);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha7))
-        {
-            SelectSlot(6);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha8))
-        {
-            SelectSlot(7);
-        }
-
-    }
-*/
 
    private void CheckAlphaNumericKeysForSelection()
     {

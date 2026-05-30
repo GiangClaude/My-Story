@@ -9,15 +9,14 @@ public static class GlobalHelper
         return $"{obj.scene.name}_{obj.transform.position.x}_{obj.transform.position.y}"; //Chest_3_4
     }
 
-    /// <summary>
-    /// Spawns a specified quantity of an item at a given position with a slight random offset and launch force.
-    /// </summary>
-    /// <param name="itemDataToSpawn">The ItemData of the item to spawn.</param>
-    /// <param name="centerPosition">The central position around which the item will spawn.</param>
-    /// <param name="quantity">Number of items to spawn.</param>
-    /// <param name="spawnRadius">The radius within which the item will be randomly offset from the centerPosition.</param>
-    /// <param name="launchForceMultiplier">A multiplier for the small launch force applied to the item.</param>
-    /// <returns>The last spawned Item component, or null if spawning failed.</returns>
+
+    /*
+     * itemDataToSpawn: loai vat pham can tao
+     * centerPosition: vi tri trung tam
+     * quantity: so luong
+     * spawnRadius: ban kinh ngau nhien
+     * launchForceMultiplier: luc day nho
+     */ 
     public static Item SpawnItemAt(ItemData itemDataToSpawn, Vector3 centerPosition, int quantity = 1, float spawnRadius = 0.5f, float launchForceMultiplier = 0.0001f)
     {
         if (itemDataToSpawn == null)
@@ -45,7 +44,6 @@ public static class GlobalHelper
             Vector3 spawnPosition = centerPosition + new Vector3(randomOffset.x, randomOffset.y, 0);
 
             Item droppedItem = Object.Instantiate(itemComponentPrefab, spawnPosition, Quaternion.identity);
-            // droppedItem.data = itemDataToSpawn; // Thường thì prefab đã có ItemData rồi, nhưng có thể gán lại nếu cần
 
             if (droppedItem.rb2d != null && launchForceMultiplier > 0)
             {

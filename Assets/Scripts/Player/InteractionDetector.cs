@@ -79,28 +79,6 @@ public class InteractionDetector : MonoBehaviour
         UpdateTargetInteractableLogic();
     }
 
-    /*
-    public void OnInteract(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            if (currentTargetInteractable != null)
-            {
-                if (ownerPlayer != null)
-                {
-                    currentTargetInteractable.Interact(ownerPlayer.gameObject);
-                    //interactableInRange?.Interact();
-
-                } else
-                {
-                    Debug.Log("InteractionDetector: ownerPlayer is null");
-                }
-                UpdateTargetInteractableLogic();
-
-            }
-
-        }
-    }*/
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -113,7 +91,6 @@ public class InteractionDetector : MonoBehaviour
             if (!interactablesInRange.Contains(interactable))
             {
                 interactablesInRange.Add(interactable);
-                // Debug.Log($"[InteractionDetector] Added to range: {collision.gameObject.name}");
             }
             interactionIcon.SetActive(true);
 
@@ -133,9 +110,7 @@ public class InteractionDetector : MonoBehaviour
                 {
                     ChangeTarget(null);
                 }
-                // Debug.Log($"[InteractionDetector] Removed from range: {collision.gameObject.name}");
             }
-            //interactableInRange = null;
             interactionIcon.SetActive(false);
         }
     }
@@ -172,42 +147,6 @@ public class InteractionDetector : MonoBehaviour
                 currentPromptInstance = null;
             }
         }
-        /*
-        IInteractable newClosestTarget = null;
-        float shortestDistance = float.MaxValue;
-
-        if (referenceTransformForDistance == null)
-        {
-            // Debug.LogError("InteractionDetector: referenceTransformForDistance is null. Không thể tính khoảng cách.");
-            if (interactionIcon != null) interactionIcon.SetActive(false); // Tắt icon nếu không có tham chiếu
-            currentTargetInteractable = null;
-            return;
-        }
-
-        foreach (var interactable in interactablesInRange)
-        {
-            // Chỉ xét những đối tượng có thể tương tác (CanInteract() == true)
-            if (interactable.CanInteract())
-            {
-                MonoBehaviour interactableMono = interactable as MonoBehaviour;
-                if (interactableMono != null) // Đảm bảo đối tượng là một MonoBehaviour để lấy transform
-                {
-                    float distanceToPlayer = Vector3.Distance(referenceTransformForDistance.position, interactableMono.transform.position);
-                    if (distanceToPlayer < shortestDistance)
-                    {
-                        shortestDistance = distanceToPlayer;
-                        newClosestTarget = interactable;
-                    }
-                }
-            }
-        }
-
-        // Cập nhật currentTargetInteractable nếu nó thay đổi
-        if (currentTargetInteractable != newClosestTarget)
-        {
-            currentTargetInteractable = newClosestTarget;
-        }
-    */
 
         // Cập nhật trạng thái của icon tương tác
         if (interactionIcon != null)

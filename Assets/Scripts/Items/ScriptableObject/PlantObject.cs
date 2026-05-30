@@ -17,7 +17,7 @@ public class PlantObject : ScriptableObject
     [System.Serializable]
     public class InteractionRequirement
     {
-        [Tooltip("Index của plantStage (trong mảng plantStages) mà tại đó yêu cầu tương tác này sẽ kích hoạt. Ví dụ: 0 cho stage đầu tiên, 1 cho stage thứ hai,...")]
+        [Tooltip("Index của plantStage (trong mảng plantStages) mà tại đó yêu cầu tương tác này sẽ kích hoạt.")]
         public int triggerAtPlantStage;
 
         [Tooltip("Item người chơi cần sử dụng để hoàn thành tương tác này.")]
@@ -33,6 +33,7 @@ public class PlantObject : ScriptableObject
         public Tile soilTileAfterInteraction;
 
     }
+
     [Header("Interaction Requirements")]
     [Tooltip("Danh sách các yêu cầu tương tác trong suốt quá trình phát triển của cây. Sắp xếp theo thứ tự mong muốn.")]
     public List<InteractionRequirement> interactionRequirements = new List<InteractionRequirement>();
@@ -40,6 +41,7 @@ public class PlantObject : ScriptableObject
     [System.Serializable] 
     public class HarvestYield
     {
+        [Tooltip(".")]
         public ItemData itemData;
         public int minCount = 1;
         public int maxCount = 2;
@@ -49,8 +51,4 @@ public class PlantObject : ScriptableObject
 
     [Header("Harvesting")]
     public List<HarvestYield> potentialYields = new();
-    /*
-    public ItemData yieldItemData; // Item sẽ nhận được khi thu hoạch
-    public int yieldCount = 2;    // Số lượng item nhận được
-    */
 }

@@ -28,10 +28,12 @@ public class pickupThing : InteractableVisuals
         Item item = GetComponent<Item>();
         if (item != null && item.data != null)
         {
+            item.PickUp();
             if (player.inventory.Add(item))
             {
+                player.uiManager.inventoryUI.Refresh();
                 Destroy(this.gameObject);
-            } else { };
+            }
         }
     }
 

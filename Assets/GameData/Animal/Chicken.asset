@@ -21,4 +21,7 @@ MonoBehaviour:
     minCount: 1
     maxCount: 2
     dropChance: 1
-  animalPrefabs: {fileID: 1120734020408040217, guid: 60285b4d19013144084d00af5508074b, type: 3}
+  - itemData: {fileID: 11400000, guid: 32f10e48eb530654f92b8aede42654c5, type: 2}
+    minCount: 1
+    maxCount: 1
+    dropChance: 0.2

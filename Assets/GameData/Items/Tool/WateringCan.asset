@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b1721fd052298f4c840afff727fd3eb, type: 3}
   m_Name: WateringCan
   m_EditorClassIdentifier: 
-  itemName: WateringCan
+  itemName: Watering Can
   icon: {fileID: -6987332668960274312, guid: fd657bf8ff2136346b3a6be111ea240b, type: 3}
   itemType: 0
   itemPrefab: {fileID: 4789827751666967779, guid: 0cf358f369cdb4949a51883f9c4d3820, type: 3}

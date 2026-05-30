@@ -17,7 +17,6 @@ public class Movement : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");// Lay vi tri doc
         
         direction = new Vector3(horizontal, vertical);//Tao vecto
-
         //Vị trí mới = vị trí cũ + vecto chuyển đổi * tốc độ * thời gian chênh lệch;
 
         AnimateMovement(direction);

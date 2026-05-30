@@ -15,5 +15,5 @@ MonoBehaviour:
   itemName: Yellow Flower
   icon: {fileID: 3599093014651263459, guid: adf6cf6316c83de49b6446c7b3a3eaa0, type: 3}
   itemType: 3
-  itemPrefab: {fileID: 4789827751666967779, guid: 4614b067d042a20428977bf3e64c30e3, type: 3}
+  itemPrefab: {fileID: 4789827751666967779, guid: 9b79f415e2c916f46a51a82c8df1eaa4, type: 3}
   correspondingPlant: {fileID: 0}

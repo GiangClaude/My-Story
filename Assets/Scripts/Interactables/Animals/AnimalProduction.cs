@@ -20,30 +20,22 @@ public class AnimalProduction : InteractableVisuals
 
     [Header("Data")]
     public AnimalObject animalData;
-    /*
-    [Header("Components")]
-    [SerializeField] private GameObject highlight;
-    private SpriteRenderer highlightRenderer;
-    [SerializeField] private GameObject interactionIcon;
-    private SpriteRenderer interactionRenderer;
-    */
+
     [Header("State Icon")]
     public Sprite harvestIcon;
     public Sprite hurryIcon;
 
     [Header("Interaction Icon")]
     public Sprite wrongIcon;
-    //public Sprite genericIcon;
+
 
     private BoundedNPC boundedNPC;
-    //private bool isCurrentlyTargeted = false;
-    //private Animator anim;
+
 
     protected override void Awake()
     {
         base.Awake();
         boundedNPC = GetComponent<BoundedNPC>();
-        //anim = GetComponent<Animator>();
 
         if (animalData == null)
         {
@@ -68,7 +60,6 @@ public class AnimalProduction : InteractableVisuals
     private void Start()
     {
         TransitionToState(AnimalState.Idle);
-        //ResetTimer();
     }
 
     private void Update()
@@ -129,8 +120,6 @@ public class AnimalProduction : InteractableVisuals
 
         currentState = newState;
         currentTimer = 0f;
-
-        //if (highlight != null) highlight.SetActive(false);
 
         switch(currentState )
         {

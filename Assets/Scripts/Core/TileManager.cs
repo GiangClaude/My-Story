@@ -7,17 +7,15 @@ using UnityEngine.Tilemaps;
 public class TileManager : MonoBehaviour
 {
 
-    [SerializeField] private Grid tilemapGridReference; // Đổi tên biến cho rõ ràng
-    public Grid Grid => tilemapGridReference; // Thêm property để truy cập Grid
+    [SerializeField] private Grid tilemapGridReference; 
+    public Grid Grid => tilemapGridReference;
     [SerializeField] private Tilemap interactableMap;
-    [SerializeField] private Tilemap cropMap; // --- Tilemap riêng để quản lý cây trồng ---
-
+    [SerializeField] private Tilemap cropMap; 
     [SerializeField] private Tile hiddenInteractableTile;
     [Header("Interactive Soid States")]
     [Tooltip("Dat da cay")]
     [SerializeField] private Tile tilledDirtTile; // Đã cày
 
-    //[SerializeField] private Tile occupiedTilledDirtTile; //Đã cày và có cây 
     [SerializeField] private Tile wateredTilledDirtTile;
 
     
@@ -64,14 +62,6 @@ public class TileManager : MonoBehaviour
         //Xac nhan dat da cay va khong co cay nao => moi co the trong cay
 
         return interactableTile != null && (isTilled || isWateredAndTilled) && cropTile == null;
-        /*if (tile != null)
-        {
-            if (tile.name == "Interactable_Visible")
-            {
-                return true;
-            }
-        }
-        return false;*/
     }
 
     //Thay đổi Interacted thành đã tương tác
@@ -115,33 +105,6 @@ public class TileManager : MonoBehaviour
     }
 
     public Tile GetWateredSoilTile() => wateredTilledDirtTile;
-    /*
-    public void SetPlotOccupied(Vector3Int position, bool occupied)
-    {
-        if (cropMap != null)
-        {
-            if (occupied && interactableMap.GetTile(position) == tilledDirtTile)
-            {
-                if (occupiedTilledDirtTile != null)
-                {
-                    interactableMap.SetTile(position, occupiedTilledDirtTile);
-                } 
-            }
-            else if (!occupied && (interactableMap.GetTile(position) == occupiedTilledDirtTile || interactableMap.GetTile(position) == tilledDirtTile))
-            {
-                interactableMap.SetTile(position, tilledDirtTile);
-            }
-        }
-        Debug.Log($"Set plot {position} occupied state to: {occupied}");
-    }
-
-    public bool IsPlotOccupied(Vector3Int position)
-    {
-        TileBase interactableTile = interactableMap.GetTile(position);
-        return interactableTile == occupiedTilledDirtTile;
-    }
-    */
-    // Hàm này để khi thu hoạch xong, trả ô đất về trạng thái đã cày
     public void SetPlotTilled(Vector3Int position)
     {
         interactableMap.SetTile(position, tilledDirtTile);

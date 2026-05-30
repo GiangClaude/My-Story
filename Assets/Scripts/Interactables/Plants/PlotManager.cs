@@ -45,28 +45,10 @@ public class PlotManager : InteractableVisuals
     private float growthTimer;
     private TileManager tileManager;
 
-    /*
-    [Header("Visual")]
-    [SerializeField] private GameObject highlight;
-    public SpriteRenderer highlightRenderer;
-    [SerializeField] private GameObject interactionIcon;
-    public SpriteRenderer interactionRenderer;
-    */
-
     [Header("State Icon")]
     public Sprite harvestIcon;
     public Sprite deflautIcon;
 
-    /*
-    [Header("Feedback Icon")]
-    public Sprite wrongItemIcon;
-    public Sprite genericIcon;
-    */
-
-    //private bool isCurrentlyTargeted = false;
-
-    //Lấy dữ liệu đã add từ PlantObject (Ví dụ tên cây, tg trồng,...)
-    //public PlantObject selectedPlant;
     protected override void Awake()
     {
         base.Awake();
@@ -106,16 +88,6 @@ public class PlotManager : InteractableVisuals
 
         if (genericTargetIcon == null) genericTargetIcon = Resources.Load<Sprite>("DefaultGenericTargetIconPath"); // Ví dụ
         if (wrongItemFeedbackIcon == null) wrongItemFeedbackIcon = Resources.Load<Sprite>("DefaultWrongItemIconPath");
-        /*
-        if (interactionIcon != null)
-        {
-            interactionRenderer = interactionIcon.GetComponent<SpriteRenderer>();  
-            if (interactionRenderer == null)
-            {
-                Debug.Log("Chua gan sprite cho interactionIcon");
-            }
-            interactionIcon.SetActive(false);
-        }*/
 
     }
 
@@ -217,12 +189,6 @@ public class PlotManager : InteractableVisuals
         currentPlotState = newState;
        base.UpdateVisuals();
     }
-    /*
-    private void UpdateVisuals(Sprite tempIcon = null, float tempDuration = 0f)
-    {
-        UpdateStateVisuals(); //Cap nhat icon trang thai
-        UpdateInteractionVisuals(tempIcon, tempDuration);
-    }*/
 
     protected override void UpdateStateVisuals()
     {
@@ -260,40 +226,6 @@ public class PlotManager : InteractableVisuals
             highlight.SetActive(false);
         }
     }
-    /*
-    private void UpdateInteractionVisuals(Sprite tempIcon = null, float tempDuration = 0f)
-    { 
-        if (interactionIcon == null || interactionRenderer == null) return;
-
-        if (tempIcon != null && tempDuration > 0)
-        {
-            StartCoroutine(ShowTempHighlightIcon(tempIcon, tempDuration));
-            return;
-        }
-
-        if (isCurrentlyTargeted)
-        {
-            interactionRenderer.sprite = genericIcon;
-            interactionIcon.SetActive(true);
-            return;
-        }
-        else interactionIcon.SetActive(false);
-
-
-    }
-
-    private IEnumerator ShowTempHighlightIcon(Sprite icon, float duration)
-    {
-        if (interactionIcon == null || interactionRenderer == null) yield break;
-
-        interactionRenderer.sprite = icon;
-        interactionIcon.SetActive(true);
-
-        yield return new WaitForSeconds(duration);
-
-        UpdateVisuals();
-    }*/
-
     private void SetNewGrowthTimer()
     {
         if (plantStage < selectedPlant.plantStages.Length - 1)
@@ -436,7 +368,6 @@ public class PlotManager : InteractableVisuals
 
         if (tileManager != null)
         {
-            //tileManager.SetPlotToTilled(plotPosition);
             tileManager.SetPlotToTilled(plotPosition); // Đảm bảo ô đất vẫn ở trạng thái đã cày
         }
 
@@ -461,9 +392,7 @@ public class PlotManager : InteractableVisuals
         if (plantRenderer.sprite != null)
         {
             plantCollider.size = new Vector2(1f, 1f);
-            //plantCollider.size = plantRenderer.sprite.bounds.size;
             plantCollider.offset = Vector2.zero;
-            //plantCollider.offset = new Vector2(0, plantRenderer.bounds.center.y);
             plantCollider.enabled = true;
 
         }

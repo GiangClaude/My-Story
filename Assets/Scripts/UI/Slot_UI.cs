@@ -38,21 +38,7 @@ public class Slot_UI : MonoBehaviour, IPointerClickHandler
             SetEmpty();
         }
     }
-    /*
-    public void SetItem(Slot slot)
-    {
-        if (slot != null && !string.IsNullOrEmpty(slot.itemName))
-        {
 
-            itemIcon.sprite = slot.icon;
-            itemIcon.color = new Color(1, 1, 1, 1);
-            quantityText.text = slot.count > 1 ? slot.count.ToString() : "";
-            Debug.Log("Already copy to Toolbar!");
-        } else
-        {
-            SetEmpty();
-        }
-    }*/
     public void SetEmpty()
     {
         itemIcon.sprite = null;

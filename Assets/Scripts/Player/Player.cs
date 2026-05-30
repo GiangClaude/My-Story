@@ -57,11 +57,17 @@ public class Player : MonoBehaviour
 
     public void DropItem(Item item)
     {
+
         //Lấy vị trí của người chơi.
         Vector2 spawnLocation = transform.position;
         //Tạo một vị trí lệch ngẫu nhiên = Random bán kính 1,25 xung quanh gốc 0
-        Vector2 spawnOffset = Random.insideUnitCircle*1.25f;
+        float minRadius = 0.75f;
+        float maxRadius = 1.25f;
+        float randomRadius = Random.Range(minRadius, maxRadius);
+        Vector2 randomDirection = Random.insideUnitCircle.normalized;
+        Vector2 spawnOffset = randomDirection*randomRadius;
 
+        Debug.DrawLine(spawnLocation, spawnLocation + spawnOffset, Color.red, 2f); // Vẽ đường từ người chơi đến vị trí spawn
         //Vector3 spawnOffset = new Vector3(randX, randY, 0f).normalized;
         //Sử dụng Instantiate để tạo GameObject từ prefab item tại vị trí như ct, quaternion(góc xoay).identity(Không xoay)
         Item droppedItem = Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);

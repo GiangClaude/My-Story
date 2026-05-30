@@ -1,2 +1,16 @@
 fileFormatVersion: 2
 guid: a259c7eeddc5d444796b89616fcbb3ac
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - highlight: {instanceID: 0}
+  - interactionIconDisplay: {instanceID: 0}
+  - genericTargetIcon: {fileID: -4324058390895741048, guid: c6ea810fd17067446bf2905bfd8ad4fa, type: 3}
+  - wrongItemFeedbackIcon: {fileID: -8482879506207794504, guid: c6ea810fd17067446bf2905bfd8ad4fa, type: 3}
+  - player: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
